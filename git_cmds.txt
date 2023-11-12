@@ -27,7 +27,7 @@
 		- run git commit -m 'commit message'
 
 
-6. git log - 
+6. git log - log out the git commit history.
   
 
 

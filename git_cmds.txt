@@ -1,0 +1,31 @@
+* 3 stages of a git project:
+	a. working directory - creating, editing deleting and orgnizing files.
+		
+	b. a staging area - where you'll list changes you make to the working
+	directory.
+
+	c. a repository - where git permanently stores those changes as different
+	versions of the project.
+
+0. create and edit target file.
+
+1. git init - initializes/creates a new Git project.
+
+2. git status - check status of changes made to files.
+		- git sees the file but has not started tracking changes yet.
+
+
+3. git add <file name(s)>; git status  - adds target files to the staging area.
+					- check status of the project in git.
+
+
+4. git diff - checks the differences between the working directory and the staging area.
+		- git add <file name(s)> every time we make a change to a file.
+
+
+5. git commit - 
+  
+
+
+
+

@@ -392,9 +392,31 @@ if car_year >= 2000:
 """
 equality and relational operators
 
+checks whether two operands' values are the same (==) or different (!=).
+
+an expression involving an equality operator evaluates to a Boolean value. 
+
+A Boolean is a type that has just two values: True or False.
+"""
+x = True
+y = False
+z = x
+
+print(x == y)
+print(x == z)
+print(y == z)
+
+print(x != z)
+print(x != y)
+print(z != y)
 
 """
+relational operators check how one operand's value relates to another, like being greater than.
 
+Some operators, like >=, involve two characters. 
+
+A programmer cannot arbitrarily combine the >, =, and < symbols; only the shown two-character sequences represent valid operators.
+"""
 
 
 

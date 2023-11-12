@@ -418,6 +418,12 @@ Some operators, like >=, involve two characters.
 A programmer cannot arbitrarily combine the >, =, and < symbols; only the shown two-character sequences represent valid operators.
 """
 
+"""
+operator chaining - comparing multiple values, using multiple
+comparison operators in one expression.
+"""
+
+
 
 
 

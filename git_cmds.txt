@@ -23,9 +23,12 @@
 		- git add <file name(s)> every time we make a change to a file.
 
 
-5. git commit - 
-  
+5. git commit - after file changes are made to files (git add .)
+		- run git commit -m 'commit message'
 
+
+6. git log - 
+  
 
 
 

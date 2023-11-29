@@ -423,32 +423,275 @@ operator chaining - comparing multiple values, using multiple
 comparison operators in one expression.
 """
 
+num_items = 3
+if num_items == 3:
+   num_items = num_items + 1
+print(num_items)
+
+num_items = 3
+
+"""
+if num_items > 10:
+   num_items = num_items + 1
+print(num_items)
+
+syntax error
+"""
+
+if num_items > 10:
+   num_items = num_items + 1
+print(num_items)
+
+"""
+boolean refers to a value that is either
+True or False.
+
+boolean operator treats operands
+as True or false and evaluates to a
+value of True or False.
+
+boolean operators include and, or, not.
+
+boolean expression is an expression using
+boolean operators.
+"""
+
+val_a = 1
+val_b = ''
+if val_a and val_b:
+   print('both truthy')
+else:
+   print('both not truthy')
+
+"""
+membership and identity operators: in/not in
+
+in and not in operators, known as membership operators, yield True or False 
+if the left operand matches the value of some element in the right 
+operand, which is always a container.
+
+identity operators: is/is not
+
+use the identity operator, is, to check whether two operands are bound to a single object. 
+The inverse identity operator, is not, gives the negated value of 'is'.
+
+The id() function can be used to retrieve the identifier of any object.
+"""
 
 
 
+"""
+Problem: A company wants a program that will calculate the weekly paycheck for an employee 
+
+based on how many hours they worked. For this company, an employee earns $20 an hour for the
+
+first 40 hours that they work.The employee earns overtime, $30 an hour, 
+
+for each hour they work above 40 hours.
+
+Example: If an employee works 60 hours in a week, they would earn $20/hr for the first 40 hours. 
+
+Then they would earn $30/hr for the 20 hours they worked overtime. 
+
+Therefore, they earned: ($20/hr * 40hrs) + ($30/hr * 20 hrs) = $800 + $600 = $1400 total.
+
+
+employee_rate = 20
+
+employee_hours = 40
+
+overtime_rate = 30
+
+overtime_hours = int input()
+
+paycheck = employee_rate * employee_hours
+
+
+IF overtime_hours > 0  THEN 
+
+	paycheck += (overtime_rate * overtime_hours )
+	
+	PRINT paycheck
+
+ENDIF
+
+EISE 
+	PRINT paycheck
+
+"""
+
+employee_rate = 20
+
+employee_hours = 40
+
+overtime_rate = 30
+
+overtime_hours = int(input('employee overtime hours: '))
+
+paycheck = employee_rate * employee_hours
+
+if overtime_hours > 0:
+    paycheck += (overtime_hours * overtime_rate)
+    print(paycheck)
+else:
+    print(paycheck)
+
+
+"""
+Write a program whose inputs are three integers, 
+and whose output is the smallest of the three values.
+"""
+
+input_val_0 = 1
+input_val_1 = -1
+input_val_2 = 4
+
+if input_val_0 < input_val_1 and input_val_0 < input_val_2:
+    print(input_val_0)
+elif input_val_0 > input_val_1 and input_val_2 > input_val_1:
+    print(input_val_1)
+else:
+    print(input_val_2)
 
 
 
+"""
+Write a program that takes a date as input and outputs the date's season. 
+The input is a string to represent the month and an int to represent the day.
+"""
+
+month = input()
+day = int(input())
+year_months = ('January', 'February','March', 'April' , 'May' , 'June' , 'July' , 
+'August' , 'September' , "October" , "November" , "December")
+
+if not(month in year_months ):
+    print("Invalid")
+
+elif month == 'March':
+    if not(1<=day<=31):
+        print ("Invalid")
+    elif day<=19:
+        print("Winter")
+    else:
+        print ("Spring")
+elif month == 'April' :
+    if not(1<=day<=30):
+        print("Invalid")
+    else:
+        print("Spring")
+elif month == 'May':
+    if not(1<=day<=31):
+        print("Invalid")
+    else:
+        print("Spring")
+elif month == 'June':
+    if not(1<=day<=30):
+        print("Invalid")
+    elif day<=20:
+        print ("Spring")
+    else:
+        print("Summer")
+elif month == 'July' or month == 'August':
+    if not(1<=day<=31):
+        print("Invalid")
+    else: 
+        print("Summer")
+elif month == 'September':
+    if not(1<=day<=30):
+        print("Invalid")
+    elif day<=21:
+        print ("Summer")
+    else:
+        print ("Autumn")
+elif month == "October":
+    if not(1<=day<=31):
+        print("Invalid")
+    else:
+        print("Autumn")
+elif month == "November":
+    if not(1<=day<=30):
+        print("Invalid")
+    else:
+        print ("Autumn")
+elif month == "December":
+    if not(1<=day<=31):
+        print("Invalid")
+    elif day <=20:
+        print ("Autumn")
+    else:
+        print ("Winter")
+elif month == 'January':
+    if not(1<=day<=31):
+        print("Invalid")
+    else:
+        print("Winter")
+elif month == "February":
+    if not(1<=day<=29):
+        print("Invalid")
+else:
+    print ("Winter")
 
 
+"""
+Write a program with total change amount as an integer input, and output the 
+change using the fewest coins, one coin type per line. The coin types are Dollars, 
+Quarters, Dimes, Nickels, and Pennies. 
+Use singular and plural coin names as appropriate, like 1 Penny vs. 2 Pennies.
+"""
+
+total_change=int(input())
+
+dollars=total_change//100
+quarters=(total_change-dollars*100)//25
+dimes=(total_change-dollars*100-quarters*25)//10
+nickels=(total_change-dollars*100-quarters*25-dimes*10)//5
+pennys=(total_change-dollars*100-quarters*25-dimes*10-nickels*5)//1
+
+#no change 
+if total_change<=0:
+   print('No change')
+#dollars
+if 0<dollars<=1:
+   print(dollars,'Dollar')
+if dollars>1:
+   print(dollars,'Dollars')
+#quarters  
+if 0<quarters<=1:
+   print(quarters,'Quarter')
+if quarters>1:
+   print(quarters,'Quarters')
+#dimes   
+if 0<dimes<=1:
+   print(dimes,'Dime')
+if dimes>1:
+   print(dimes,'Dimes')
+#nickels   
+if 0<nickels<=1:
+   print(nickels,'Nickel')
+if nickels>1:
+   print(nickels,'Nickels')
+#pennys
+if 0<pennys<=1:
+   print(pennys,'Penny')
+if pennys>1:
+   print(pennys,'Pennys')
 
 
+"""
+WHILE LOOP
+
+A while loop is a construct that repeatedly executes an 
+indented block of code (known as the loop body) as long as 
+the loop's expression is True.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+"""
+g = 0
+while g <= 2:
+    print(g, end = ' ')
+    g += 1
+print()
 
 
 

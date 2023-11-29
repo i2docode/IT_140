@@ -1,4 +1,4 @@
-#!/usr/bin/python 3
+#!/usr/bin/python3
 import random
 
 initialize_game = input('would you like to play a game?: ')
@@ -9,15 +9,15 @@ for phrase in confirm_phrases:
 
     if initialize_game in confirm_phrases:
 
-        lower_bount = int(input('great! now enter lower bound number: '))
+        lower_bound = int(input('great! now enter lower bound number: '))
 
         upper_bound = int(input('sweet! now enter a upper bound number: '))
 
         # variable that sets the random number to be guessed.
-        rando_int = random.randint(lower_bount, upper_bound)
+        rando_int = random.randint(lower_bound, upper_bound)
 
         # variable that prompts user to enter an integer guess.
-        user_guess = int(input(f'ok, now guess the number between {str(lower_bount)} and {str(upper_bound)}: '))
+        user_guess = int(input(f'ok, now guess the number between {str(lower_bound)} and {str(upper_bound)}: '))
 
         # utilize while loop to run until clause become false.
         # checks if user guess is greater than random integer.

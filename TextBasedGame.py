@@ -49,35 +49,53 @@ def main():
     
     start = input(f'{user_input}')
 
+    while start != '':
 
-    if start == 'go east':
-        inventory = []
+        location = ''
 
-        location = \
-        """
-        'You are in the Medical Bay'
-        """
-        print(location)
-        print(f'\tinventory = {inventory}')
-        east_move = \
-        """
-        your move: [ 1. go north, 2. go south, 3. go west, 4. get item ]\n
-        """
-        
+        # first start option from the Corridor location.
+        if start == 'go east':
 
+            inventory = []
 
-        med_bay_move = input(f'{east_move}')
+            location = \
+            """
+            'You are in the Medical Bay'
+            """
+
+            print(location)
+
+            print(f'\t\tinventory = {inventory}')
+            
+            east_move = \
+            """
+            your move: [ 1. go north, 2. go south, 3. go west, 4. get item ]\n
+            """
+            
+            med_bay_move = input(f'{east_move}')
 
             
-        if med_bay_move == 'get item':
-            med_bay_item = 'Anti-Venom'
-            inventory.append(med_bay_item)
-            print(f'\t\tinventory = {inventory}')
+            if med_bay_move == 'get item':
 
+                med_bay_item = 'Anti-Venom'
+
+                inventory.append(med_bay_item)
+
+                print(f'\t\tinventory = {inventory}')
+            
+            elif med_bay_move == 'go north':
+                location = \
+                """
+                'You are in the Mess Hall'
+                """
+                print(location)
+
+
+
+            else:
+                exit()
         else:
             exit()
-    else:
-        exit()
 
 
         

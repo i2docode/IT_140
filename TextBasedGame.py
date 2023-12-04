@@ -20,21 +20,21 @@ def main():
     rooms_and_items = {
         'Corridor': {'South':'Flight Deck', 'East':'Medical Bay', 'West':'Engineering Lab', 'item':'night-vision goggles'},
 
-        'Fight Deck':{'North':'Corridor', 'East':'Kennel', 'West':'Boiler Room', 'item':'Alien'},
+        'Fight-Deck':{'North':'Corridor', 'East':'Kennel', 'West':'Boiler Room', 'item':'Alien'},
 
         'Kennel':{'North':'Medical Bay', 'West':'Flight Deck', 'item':'Jet Pack'},
 
-        'Medical Bay':{'North':'Mess Hall', 'West':'Corridor', 'South':'Kennel', 'item':'Attack Dog'},
+        'Medical-Bay':{'North':'Mess Hall', 'West':'Corridor', 'South':'Kennel', 'item':'Attack Dog'},
 
-        'Engineering Lab':{'East':'Corridor', 'North':'Server Room', 'item':'holographic tablet'},
+        'Engineering-Lab':{'East':'Corridor', 'North':'Server Room', 'item':'holographic tablet'},
 
-        'Server Room':{'South':'Engineering Lab', 'East':'Armory', 'item':'laser cannon'},
+        'Server-Room':{'South':'Engineering Lab', 'East':'Armory', 'item':'laser cannon'},
 
         'Armory':{'West':'Server Room', 'East':'Mess Hall', 'item':'roast beef'},
 
-        'Mess Hall':{'West':'Armory', 'South':'Medical Bay', 'item':'anti-venom'},
+        'Mess-Hall':{'West':'Armory', 'South':'Medical Bay', 'item':'anti-venom'},
 
-        'Boiler Room':{'East':'flight deck', 'item':'Alien'}
+        'Boiler-Room':{'East':'flight deck', 'item':'Alien'}
     }
 
 
@@ -58,10 +58,7 @@ def main():
 
             inventory = []
 
-            location = \
-            """
-            'You are in the Medical Bay'
-            """
+            location = f'You are now in the {rooms_and_items.Medical-Bay}'
 
             print(location)
 

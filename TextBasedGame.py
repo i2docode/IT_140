@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # Aaron Bevans
-# modifier comment
+
 def player_instructions():
     # displays main menu and commands.
     print('\n** Rogue Alien Hunter **\n')
